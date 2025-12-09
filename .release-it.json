@@ -1,0 +1,43 @@
+{
+  "$schema": "https://unpkg.com/release-it@19/schema/release-it.json",
+  "git": {
+    "commitMessage": "chore: 发布 v${version}",
+    "tagName": "v${version}",
+    "tagAnnotation": "发布 v${version}",
+    "push": true,
+    "requireCleanWorkingDir": true,
+    "requireBranch": "main"
+  },
+  "github": {
+    "release": true,
+    "releaseName": "v${version}"
+  },
+  "npm": {
+    "publish": true,
+    "publishArgs": ["--access public"]
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": {
+        "name": "conventionalcommits",
+        "types": [
+          { "type": "feat", "section": "✨ 新功能" },
+          { "type": "fix", "section": "🐛 Bug 修复" },
+          { "type": "perf", "section": "⚡ 性能优化" },
+          { "type": "refactor", "section": "♻️ 代码重构" },
+          { "type": "docs", "section": "📝 文档更新" },
+          { "type": "chore", "section": "🔧 其他更新" },
+          { "type": "style", "section": "💄 代码样式" },
+          { "type": "test", "section": "✅ 测试" },
+          { "type": "build", "section": "📦 构建相关" },
+          { "type": "ci", "section": "👷 CI 配置" }
+        ]
+      },
+      "infile": "CHANGELOG.md",
+      "header": "# 更新日志"
+    }
+  },
+  "hooks": {
+    "after:bump": "pnpm build"
+  }
+}

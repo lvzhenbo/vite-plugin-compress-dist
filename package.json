@@ -34,7 +34,7 @@
     }
   },
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "tsdown",
     "prepare": "husky",
     "release": "release-it"
   },
@@ -42,21 +42,20 @@
     "@commitlint/cli": "^20.2.0",
     "@commitlint/config-conventional": "^20.2.0",
     "@commitlint/types": "^20.2.0",
-    "@eslint/js": "^9.39.1",
+    "@eslint/js": "^9.39.2",
     "@release-it/conventional-changelog": "10.0.1",
-    "@types/node": "^24.10.2",
-    "eslint": "^9.39.1",
+    "@types/node": "^24.10.4",
+    "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "husky": "^9.1.7",
     "jiti": "^2.6.1",
     "lint-staged": "^16.2.7",
     "prettier": "^3.7.4",
-    "release-it": "^19.0.6",
+    "release-it": "^19.1.0",
+    "tsdown": "^0.17.4",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.49.0",
-    "vite": "^7.2.7",
-    "vite-plugin-dts": "^4.5.4"
+    "typescript-eslint": "^8.49.0"
   },
   "dependencies": {
     "@zip.js/zip.js": "^2.8.11",

@@ -21,5 +21,11 @@
     "noUncheckedSideEffectImports": true,
     "types": ["node"]
   },
-  "include": ["src", "eslint.config.*", "prettier.config.*", "vite.config.*", "commitlint.config.*"]
+  "include": [
+    "src",
+    "eslint.config.*",
+    "prettier.config.*",
+    "tsdown.config.*",
+    "commitlint.config.*"
+  ]
 }

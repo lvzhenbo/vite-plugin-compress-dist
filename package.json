@@ -35,6 +35,7 @@
   },
   "scripts": {
     "build": "tsdown",
+    "type-check": "tsc --noEmit",
     "prepare": "husky",
     "release": "release-it"
   },

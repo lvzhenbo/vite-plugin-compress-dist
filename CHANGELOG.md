@@ -1,5 +1,15 @@
 # 更新日志
 
+## [0.2.0](https://github.com/lvzhenbo/vite-plugin-compress-dist/compare/v0.1.0...v0.2.0) (2026-02-09)
+
+### ✨ 新功能
+
+- 添加打包后打开文件所在目录并选中的实验性功能，跨平台未完全测试 ([9082efe](https://github.com/lvzhenbo/vite-plugin-compress-dist/commit/9082efea590fb4425914abf7a13fc1178f21d459))
+
+### 🔧 其他更新
+
+- 更新依赖 ([aa9ff06](https://github.com/lvzhenbo/vite-plugin-compress-dist/commit/aa9ff065069ab2cca3620e63a5af4bdb023660b5))
+
 ## 0.1.0 (2025-12-15)
 
 - chore: 迁移到OIDC发布，action依赖更新 ([28e6a80](https://github.com/lvzhenbo/vite-plugin-compress-dist/commit/28e6a80))

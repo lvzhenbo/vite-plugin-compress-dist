@@ -1,6 +1,7 @@
 import type { Plugin, ResolvedConfig } from 'vite';
 import { BlobReader, BlobWriter, ZipWriter } from '@zip.js/zip.js';
 import { consola } from 'consola';
+import { reveal } from '@lvzhenbo/open-native';
 import { filesize } from 'filesize';
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -46,6 +47,13 @@ export interface CompressDistOptions {
    * @default false
    */
   deleteDistBeforeCompress?: boolean;
+  /**
+   * **实验性功能注意**：跨平台未完全测试，有问题可向 https://github.com/lvzhenbo/open-native/issues 反馈
+   *
+   * 是否在打包完成后在文件管理器中打开并选中文件
+   * @default false
+   */
+  revealAfterCompress?: boolean;
 }
 
 export function viteCompressDist(options: CompressDistOptions = {}): Plugin {
@@ -58,6 +66,7 @@ export function viteCompressDist(options: CompressDistOptions = {}): Plugin {
     deleteDistAfterCompress = false,
     includeRoot = false,
     deleteDistBeforeCompress = false,
+    revealAfterCompress = false,
   } = options;
 
   return {
@@ -142,6 +151,16 @@ export function viteCompressDist(options: CompressDistOptions = {}): Plugin {
         if (deleteDistAfterCompress) {
           await fs.rm(distPath, { recursive: true, force: true });
           consola.info(`[vite-plugin-compress-dist] 已删除原目录: ${distPath}`);
+        }
+
+        // 在文件管理器中打开并选中文件
+        if (revealAfterCompress) {
+          try {
+            reveal(zipFilePath);
+            consola.info(`[vite-plugin-compress-dist] 已在文件管理器中打开并选中文件`);
+          } catch (error) {
+            consola.warn(`[vite-plugin-compress-dist] 打开文件管理器失败:`, error);
+          }
         }
       } catch (error) {
         consola.error('[vite-plugin-compress-dist] 压缩失败:', error);

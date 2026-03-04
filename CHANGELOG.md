@@ -1,5 +1,15 @@
 # 更新日志
 
+## [0.3.0](https://github.com/lvzhenbo/vite-plugin-compress-dist/compare/v0.2.0...v0.3.0) (2026-03-04)
+
+### ♻️ 代码重构
+
+- 使用node的fs.rm替换rimraf依赖 ([c14831f](https://github.com/lvzhenbo/vite-plugin-compress-dist/commit/c14831f95f02a91f4816c1cddbbd571d0a823511))
+
+### 🔧 其他更新
+
+- 添加 .editorconfig 和 .gitattributes 文件以规范化代码格式 ([cb4dd29](https://github.com/lvzhenbo/vite-plugin-compress-dist/commit/cb4dd296d3e3dbf7616783b25ea3bd3a8081c2c0))
+
 ## [0.2.0](https://github.com/lvzhenbo/vite-plugin-compress-dist/compare/v0.1.0...v0.2.0) (2026-02-09)
 
 ### ✨ 新功能

@@ -5,7 +5,6 @@ import { reveal } from '@lvzhenbo/open-native';
 import { filesize } from 'filesize';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { rimraf } from 'rimraf';
 
 export interface CompressDistOptions {
   /**
@@ -82,7 +81,7 @@ export function viteCompressDist(options: CompressDistOptions = {}): Plugin {
         const distPath = path.resolve(root, distDir);
         try {
           await fs.access(distPath);
-          await rimraf(distPath);
+          await fs.rm(distPath, { recursive: true, force: true });
           consola.info(`[vite-plugin-compress-dist] 已删除 dist 目录: ${distPath}`);
         } catch {
           // 目录不存在，无需删除

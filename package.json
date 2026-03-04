@@ -40,33 +40,32 @@
     "release": "release-it"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.4.1",
-    "@commitlint/config-conventional": "^20.4.1",
-    "@commitlint/types": "^20.4.0",
+    "@commitlint/cli": "^20.4.3",
+    "@commitlint/config-conventional": "^20.4.3",
+    "@commitlint/types": "^20.4.3",
     "@eslint/js": "^10.0.1",
     "@release-it/conventional-changelog": "^10.0.5",
-    "@types/node": "^25.2.2",
-    "eslint": "^10.0.0",
+    "@types/node": "^25.3.3",
+    "eslint": "^10.0.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
     "husky": "^9.1.7",
     "jiti": "^2.6.1",
-    "lint-staged": "^16.2.7",
+    "lint-staged": "^16.3.2",
     "prettier": "^3.8.1",
     "release-it": "^19.2.4",
     "tsdown": "^0.20.3",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.54.0"
+    "typescript-eslint": "^8.56.1"
   },
   "dependencies": {
     "@lvzhenbo/open-native": "^0.1.2",
-    "@zip.js/zip.js": "^2.8.17",
+    "@zip.js/zip.js": "^2.8.22",
     "consola": "^3.4.2",
-    "filesize": "^11.0.13",
-    "rimraf": "^6.1.2"
+    "filesize": "^11.0.13"
   },
   "peerDependencies": {
     "vite": ">=7"
   },
-  "packageManager": "pnpm@10.29.2"
+  "packageManager": "pnpm@10.30.3"
 }

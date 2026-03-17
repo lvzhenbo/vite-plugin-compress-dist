@@ -40,32 +40,32 @@
     "release": "release-it"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.4.3",
-    "@commitlint/config-conventional": "^20.4.3",
-    "@commitlint/types": "^20.4.3",
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@commitlint/types": "^20.5.0",
     "@eslint/js": "^10.0.1",
-    "@release-it/conventional-changelog": "^10.0.5",
-    "@types/node": "^25.3.3",
-    "eslint": "^10.0.2",
+    "@release-it/conventional-changelog": "^10.0.6",
+    "@types/node": "^25.5.0",
+    "eslint": "^10.0.3",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
     "husky": "^9.1.7",
     "jiti": "^2.6.1",
-    "lint-staged": "^16.3.2",
+    "lint-staged": "^16.4.0",
     "prettier": "^3.8.1",
     "release-it": "^19.2.4",
-    "tsdown": "^0.20.3",
-    "typescript": "~5.9.3",
-    "typescript-eslint": "^8.56.1"
+    "tsdown": "^0.21.4",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.57.1"
   },
   "dependencies": {
     "@lvzhenbo/open-native": "^0.1.2",
-    "@zip.js/zip.js": "^2.8.22",
+    "@zip.js/zip.js": "^2.8.23",
     "consola": "^3.4.2",
     "filesize": "^11.0.13"
   },
   "peerDependencies": {
-    "vite": ">=7"
+    "vite": ">=7.1.11"
   },
-  "packageManager": "pnpm@10.30.3"
+  "packageManager": "pnpm@10.32.1"
 }
